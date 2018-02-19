@@ -1,0 +1,15 @@
+.sidebar{
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	color: #fff;
+	background: #29363d;
+}
+
+.sidebar-fixed{
+	position: absolute;
+	z-index: 1000;
+	width : 200px; 
+	height: calc(100vh - 55px);
+}
+
