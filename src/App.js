@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
-import {HashRouter , Switch , Route} from 'react-router-dom';
+import {BrowserRouter , Switch , Route} from 'react-router-dom';
 import Full from './components/Full/Full.js';
 
 
 class App extends Component {
   render() {
     return (
-    <HashRouter>
+    <BrowserRouter>
       <Switch>
         <Route path="/" name="Home" component={Full}/>
       </Switch>
-    </HashRouter>
+    </BrowserRouter>
     );
 }
 }
