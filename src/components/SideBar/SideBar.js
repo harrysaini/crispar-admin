@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './sidebar.css';
 import {NavLink} from 'react-router-dom';
-import {Badge, Nav, NavItem, NavLink as ALink } from 'reactstrap';
+import {Nav, NavItem, NavLink as ALink } from 'reactstrap';
 
 class SideBar extends Component {
 

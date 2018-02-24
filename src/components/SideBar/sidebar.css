@@ -7,7 +7,7 @@
 }
 
 .sidebar-fixed{
-	position: absolute;
+	position: fixed;
 	z-index: 1000;
 	width : 200px; 
 	height: calc(100vh - 55px);

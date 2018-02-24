@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
-import {Link, Switch, Route, Redirect} from 'react-router-dom';
+import {Switch, Route, Redirect} from 'react-router-dom';
 import { Container } from 'reactstrap';
+import { ToastContainer ,toast} from 'react-toastify';
+
 
 import './full.css';
 import Header from '../Header/Header.js';
@@ -14,11 +16,14 @@ class Full extends Component {
   render() {
     return (
       <div className="app">
+        <ToastContainer
+          position = {toast.POSITION.BOTTOM_CENTER}
+        />
         <Header />
         <div className="app-body">
           <SideBar />
           <div className="main-div">
-            <Container fluid>
+            <Container fluid className='main-div-inner'>
               <Switch>
                 <Route path='/dashboard' component={Dashboard} />
                 <Route path='/users/add' component={AddUserPage} />
