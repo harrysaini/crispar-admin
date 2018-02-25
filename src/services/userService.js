@@ -1,10 +1,11 @@
 import configVars from '../config/vars';
+import {myFetch} from '../utils/fetch_utils.js';
 
 var apiUrl = configVars.apiUrl;
 
 export function addNewUser(userObj){
 	return new Promise((resolve,reject)=>{
-		fetch( apiUrl + '/user', 
+		myFetch( apiUrl + '/user', 
 			{
 			  method: 'POST',
 			  mode: 'cors',
@@ -14,13 +15,9 @@ export function addNewUser(userObj){
 			  })
 			}
 		).then(res =>{ 
-			return res.json();
-		}).then(res => {
-		  	console.log(res);
 		  	resolve(res);
-		}).catch(err => {
-			console.log(err);
-			reject(err);
+		}).catch((err) => {
+			reject(err.message)
 		});
 	});
 

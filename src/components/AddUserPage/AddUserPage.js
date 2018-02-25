@@ -28,7 +28,7 @@ class AddUserPage extends Component {
   		toast.success('User added sucessfully!');
   	}).catch(err =>{
   		console.log(err);
-  		toast.error(err.message);
+  		toast.error(err);
   	});
   }
 
